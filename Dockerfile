@@ -5,6 +5,7 @@ WORKDIR /usr/src/app
 # Copy package*.json for npm install
 COPY package*.json ./
 # Run npm clean install, including dev dependencies for @angular-devkit
+RUN npm install
 RUN npm ci
 # Run npm install @angular/cli
 RUN npm install -g @angular/cli
