@@ -19,4 +19,5 @@ FROM nginx:alpine
 #COPY --from=build /usr/src/app/dist/ /usr/share/nginx/html
 COPY --from=build /usr/src/app/dist/angular-project/browser /usr/share/nginx/html
 # Expose port 80
-#EXPOSE 80
+EXPOSE 80
+EXPOSE 443
