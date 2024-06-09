@@ -1,5 +1,15 @@
 <p>main-page works!</p>
 
+<div>
+  <ul>
+    <li *ngFor="let data of stravadata">
+      <h2>{{ data.name }}</h2>
+      <p>{{ data.type }}</p>
+    </li>
+  </ul>
+</div>
+
+
 <div class="example-container mat-elevation-z8">
   <mat-table #table [dataSource]="posts">
 
