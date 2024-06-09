@@ -1,17 +1,30 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
+import {ApiService} from "../api.service";
+import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [MatTableModule],
+  imports: [MatTableModule, NgForOf],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })
 
-export class MainPageComponent {
-  displayedColumns = ['position', 'name', 'weight', 'symbol'];
+export class MainPageComponent implements OnInit {
+  posts: any[] = [];
+
+  constructor(private apiService: ApiService) {
+  }
+
+  displayedColumns = ['title', 'body'];
   dataSource = ELEMENT_DATA;
+
+  ngOnInit(): void {
+    this.apiService.getPosts().subscribe((data) => {
+      this.posts = data;
+    });
+  }
 }
 
 export interface Element {
