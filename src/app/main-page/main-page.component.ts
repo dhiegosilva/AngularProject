@@ -4,11 +4,10 @@ import {ApiService} from "../api.service";
 import {NgForOf} from "@angular/common";
 
 @Component({
-  selector: 'app-main-page',
-  standalone: true,
-  imports: [MatTableModule, NgForOf],
-  templateUrl: './main-page.component.html',
-  styleUrl: './main-page.component.scss'
+    selector: 'app-main-page',
+    imports: [MatTableModule, NgForOf],
+    templateUrl: './main-page.component.html',
+    styleUrl: './main-page.component.scss'
 })
 
 export class MainPageComponent implements OnInit {
