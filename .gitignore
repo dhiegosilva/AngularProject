@@ -10,8 +10,11 @@
 /node_modules
 npm-debug.log
 yarn-error.log
+node_modules/
+package-lock.json
 
 # IDEs and editors
+.vscode/
 .idea/
 .project
 .classpath
@@ -19,6 +22,7 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
+*.iml
 
 # Visual Studio Code
 .vscode/*
@@ -36,6 +40,11 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+*.log
+*.tmp
+
+# Environment files
+src/environments/environment*.ts
 
 # System files
 .DS_Store
